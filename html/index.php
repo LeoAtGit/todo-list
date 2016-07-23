@@ -15,10 +15,30 @@
 <body>
 <div class="content">
 	<h1 align="center" class="header">TODO-List</h1>
+	<div class="space_between_notes"></div>
+	<div class="add_new_note">
+		<form autocomplete="off" >
+			<div id="add_new_note_div">
+				<div id="div_new_note_text">
+					<input type="text" id="input_new_note">
+				</div>
+				<div id="div_new_note_submit">
+					<input type="submit" value="Add Note" id="submit_button">
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="space_between_notes"></div>
+	<div class="add_new_note"></div>
+	<div class="space_between_notes"></div>
+	<div class="add_new_note"></div>
+	<div class="space_between_notes"></div>
+	<div class="add_new_note"></div>
+	<div class="space_between_notes"></div>
 	<?php
-	
-	//TODO
-	
+
+	//TODO foreach
+
 	?>
 </div>
 </body>
