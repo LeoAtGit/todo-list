@@ -8,8 +8,7 @@
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png?v=1"/>
 	
 	<link rel="stylesheet" href="css/public.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+	<script src="js/jquery.min-3.1.0.js"></script>
 </head>
 
 <body>
@@ -17,7 +16,7 @@
 	<h1 align="center" class="header">TODO-List</h1>
 	<div class="space_between_notes"></div>
 	<div class="add_new_note">
-		<form autocomplete="off" >
+		<form autocomplete="off" action="#">
 			<div id="add_new_note_div">
 				<div id="div_new_note_text">
 					<input type="text" id="input_new_note">
@@ -34,12 +33,15 @@
 	<div class="add_new_note"></div>
 	<div class="space_between_notes"></div>
 	<div class="add_new_note"></div>
-	<div class="space_between_notes"></div>
+
 	<?php
 
-	//TODO foreach
+	require("fetch_all_todos.php");
 
 	?>
+
+	<div class="space_between_notes"></div>
+	<script type="text/javascript" src="js/helper.js"></script>
 </div>
 </body>
 

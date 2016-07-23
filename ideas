@@ -1,3 +1,4 @@
 - change favicon / title if there are still more todos
 - make notes groupable
 - different user login
+- if there was a error in the ajax request tell the user
