@@ -15,7 +15,7 @@
 <div class="content">
 	<h1 align="center" class="header">TODO-List</h1>
 	<div class="space_between_notes"></div>
-	<div class="add_new_note">
+	<div class="add_new_note" id="first_element">
 		<form autocomplete="off" action="#">
 			<div id="add_new_note_div">
 				<div id="div_new_note_text">
@@ -28,11 +28,6 @@
 		</form>
 	</div>
 	<div class="space_between_notes"></div>
-	<div class="add_new_note"></div>
-	<div class="space_between_notes"></div>
-	<div class="add_new_note"></div>
-	<div class="space_between_notes"></div>
-	<div class="add_new_note"></div>
 
 	<?php
 
@@ -40,7 +35,6 @@
 
 	?>
 
-	<div class="space_between_notes"></div>
 	<script type="text/javascript" src="js/helper.js"></script>
 </div>
 </body>
