@@ -14,18 +14,23 @@ $("#submit_button").click(function() {
 				$note = data.substring($id.length + 1);
 
 				$("#first_element").after('<div class="space_between_notes"></div><div class="note" data-noteid="' + $id + '"><div class="checkbox"><img src="img/checkbox.png" /></div><div>' + $note + '</div></div>');
+				$("div[data-noteid=" + $id + "] + div").hide().fadeIn(400);
+				$("div[data-noteid=" + $id + "]").hide().fadeIn(400);
 			}
 		});
 });
 
-$(".checkbox").click(function() {
+$(document).on("click", ".checkbox", function() {
 	$id = $(this).parent().attr("data-noteid");
 	$.post("/delete_note.php",
 		{ id: $id },
 		function(data) {
 			if (data == "success") {
-				$("div[data-noteid=" + $id + "] + div").remove();
-				$("div[data-noteid=" + $id + "]").remove();
+				$("div[data-noteid=" + $id + "] + div").fadeOut(400);
+				$("div[data-noteid=" + $id + "]").fadeOut(400, function() {
+						$("div[data-noteid=" + $id + "] + div").remove();
+						$("div[data-noteid=" + $id + "]").remove();
+					});
 			}
 		})
 });

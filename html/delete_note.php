@@ -9,7 +9,7 @@ if ($id === "" || $id === null) {
 }
 
 // prepare the statement (taken from php.net)
-if (!($stmt = $mysqli->prepare("DELETE FROM notes WHERE id = ?"))) {
+if (!($stmt = $mysqli->prepare("UPDATE notes SET viewable = 0 WHERE id = ?"))) {
 	echo "Prepare failed: (" . $mysqli->errno . ") " . $mysqli->error;
 	$mysqli->close();
 	exit(1);
