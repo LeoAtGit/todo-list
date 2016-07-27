@@ -1,3 +1,24 @@
+$fit_page_whole_site = 900;
+
+$(document).ready(function() {
+	adapt_size();
+});
+
+$(window).resize(function() {
+	adapt_size();
+});
+
+function adapt_size()
+{
+	$window_width = $(window).width();
+
+	if ($window_width <= $fit_page_whole_site) {
+		$(".content").css("width", "100%");
+	} else {
+		$(".content").css("width", ($fit_page_whole_site / $window_width) * 100 + "%");
+	}
+}
+
 $("#submit_button").click(function() {
 	$new_note = $("#input_new_note").val();
 	$.post("/add_note.php",
